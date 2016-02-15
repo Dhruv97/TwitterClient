@@ -43,28 +43,32 @@ class TweetCell: UITableViewCell {
             TwitterClient.sharedInstance.retweet(id!)
             let retweetNumber = Int(retweetLabel.text!)
             retweetLabel.text = String(retweetNumber! + 1)
+            retweetButton.setImage(UIImage(named: "rt"), forState: .Normal)
             
         } else {
             isRetweeted = false
             TwitterClient.sharedInstance.untweet(id!)
             let retweetNumber = Int(retweetLabel.text!)
             retweetLabel.text = String(retweetNumber! - 1)
+            retweetButton.setImage(UIImage(named: "unrt"), forState: .Normal)
         }
-        
     }
     
     @IBAction func favPressed(sender: AnyObject) {
         
-            if isFavorited == false {
+        if isFavorited == false {
             isFavorited = true
             TwitterClient.sharedInstance.favoriteTweet(id!)
             let favNumber = Int(favLabel.text!)
             favLabel.text = String(favNumber! + 1)
+            favButton.setImage(UIImage(named: "fav"), forState: .Normal)
+            
         } else {
-                isFavorited = false
-                TwitterClient.sharedInstance.unFavoriteTweet(id!)
-                let favNumber = Int(favLabel.text!)
-                favLabel.text = String(favNumber! - 1)
+            isFavorited = false
+            TwitterClient.sharedInstance.unFavoriteTweet(id!)
+            let favNumber = Int(favLabel.text!)
+            favLabel.text = String(favNumber! - 1)
+            favButton.setImage(UIImage(named: "unfav"), forState: .Normal)
         }
     }
     

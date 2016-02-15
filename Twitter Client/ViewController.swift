@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     
     
+    @IBOutlet weak var logInButton: UIButton!
     
     
     @IBAction func onLogin(sender: AnyObject) {
@@ -30,18 +31,23 @@ class ViewController: UIViewController {
             }
         }
         
-                
+        
+                 logInButton.setImage(UIImage(named: "hl"), forState: .Highlighted)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        
         
     }
 
     
-    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

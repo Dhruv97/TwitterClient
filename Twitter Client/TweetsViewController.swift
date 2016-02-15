@@ -20,9 +20,15 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
+        
         // Do any additional setup after loading the view.
         
         tableView.dataSource = self
@@ -45,14 +51,24 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         
         let tweet = tweets?[indexPath.row]
         
+        let time = Int((tweet?.createdAt?.timeIntervalSinceNow)!)
+        
+        if time/3600 == 0 {
+            cell.time.text = "\(-time/60)m"
+        } else if time/86400 == 0 {
+            cell.time.text = "\(-time/3600)h"
+        } else if time/604800 == 0 {
+            cell.time.text = "\(-time/86400)d"
+        }
+        
         cell.info.text = tweet?.text!
         cell.username.text = tweet?.user?.name
         cell.twitterHandle.text = "@\((tweet?.user?.screenname!)!)"
         
         
-        if tweet?.retweetCount != 0 {
+        if tweet?.retweetCount != 0 && tweet?.retweetCount != nil  {
             
-            cell.retweetLabel.text = String(tweet!.retweetCount!)
+            cell.retweetLabel.text! = String(tweet!.retweetCount!)
             
         } else {
             cell.retweetLabel.text = ""
