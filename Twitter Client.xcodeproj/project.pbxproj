@@ -10,6 +10,9 @@
 		FC162DB41C71976200687AB9 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC162DB31C71976200687AB9 /* TweetsViewController.swift */; };
 		FC162DB61C71A51A00687AB9 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC162DB51C71A51A00687AB9 /* TweetCell.swift */; };
 		FC22E7281C6A947D009592DE /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC22E7271C6A947D009592DE /* TwitterClient.swift */; };
+		FC24349A1C73CD770072AA5C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2434991C73CD770072AA5C /* DetailViewController.swift */; };
+		FC28E1AE1C7C05540010FAA1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC28E1AD1C7C05540010FAA1 /* ProfileViewController.swift */; };
+		FC28E1B41C7C297E0010FAA1 /* NewTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC28E1B31C7C297E0010FAA1 /* NewTweetViewController.swift */; };
 		FC930E211C7160FF0071370B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC930E201C7160FF0071370B /* User.swift */; };
 		FC930E231C7161190071370B /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC930E221C7161190071370B /* Tweet.swift */; };
 		FCCC48D01C6A8EB600A1E786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC48CF1C6A8EB600A1E786 /* AppDelegate.swift */; };
@@ -27,6 +30,9 @@
 		FC162DB31C71976200687AB9 /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
 		FC162DB51C71A51A00687AB9 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		FC22E7271C6A947D009592DE /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		FC2434991C73CD770072AA5C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FC28E1AD1C7C05540010FAA1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FC28E1B31C7C297E0010FAA1 /* NewTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTweetViewController.swift; sourceTree = "<group>"; };
 		FC930E201C7160FF0071370B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC930E221C7161190071370B /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		FCCC48CC1C6A8EB600A1E786 /* Twitter Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +113,9 @@
 				FCCC48DB1C6A8EB600A1E786 /* Info.plist */,
 				FC162DB31C71976200687AB9 /* TweetsViewController.swift */,
 				FC162DB51C71A51A00687AB9 /* TweetCell.swift */,
+				FC2434991C73CD770072AA5C /* DetailViewController.swift */,
+				FC28E1AD1C7C05540010FAA1 /* ProfileViewController.swift */,
+				FC28E1B31C7C297E0010FAA1 /* NewTweetViewController.swift */,
 			);
 			path = "Twitter Client";
 			sourceTree = "<group>";
@@ -248,7 +257,10 @@
 				FC162DB41C71976200687AB9 /* TweetsViewController.swift in Sources */,
 				FCCC48D21C6A8EB600A1E786 /* ViewController.swift in Sources */,
 				FC22E7281C6A947D009592DE /* TwitterClient.swift in Sources */,
+				FC28E1AE1C7C05540010FAA1 /* ProfileViewController.swift in Sources */,
 				FCCC48D01C6A8EB600A1E786 /* AppDelegate.swift in Sources */,
+				FC24349A1C73CD770072AA5C /* DetailViewController.swift in Sources */,
+				FC28E1B41C7C297E0010FAA1 /* NewTweetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

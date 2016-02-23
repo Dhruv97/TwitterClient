@@ -11,7 +11,16 @@ import UIKit
 class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tweets: [Tweet]?
+    var single: Tweet!
 
+    @IBAction func profileSelect(sender: AnyObject) {
+        
+        let button = sender as! UIButton
+        let view = button.superview!
+        let cell = view.superview as! TweetCell
+        let indexPath = tableView.indexPathForCell(cell)
+        single = tweets![indexPath!.row]
+    }
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func logoutPressed(sender: AnyObject) {
@@ -26,8 +35,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         
         // Do any additional setup after loading the view.
         
@@ -99,17 +106,46 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        single = tweets![indexPath.row]
+        
+        return indexPath
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        print("second")
+        
+        let sdvc = segue.destinationViewController
+        
+        if let sdvc = sdvc as? DetailViewController {
+            sdvc.tweet = single
+        }
+            
+       /* else if let dc = dc as? CreateTweetViewController {
+            dc.user = User.currentUser
+        }*/
+            
+        else if let sdvc = sdvc as? ProfileViewController {
+            sdvc.user = single.user
+        }
+        
+    
+    }
 
     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     */
     
-    
-
+   
 }

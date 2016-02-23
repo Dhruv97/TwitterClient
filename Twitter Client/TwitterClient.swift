@@ -146,5 +146,14 @@ class TwitterClient: BDBOAuth1SessionManager {
         })
     }
     
+    func tweet(status: String) {
+        POST("1.1/statuses/update.json", parameters: ["status": status], success: { (operation, response) -> Void in
+            print("succesfully tweeted")
+            
+            }, failure: { (operation, error) -> Void in
+                print("error tweeting")
+        })
+    }
+    
 
 }
