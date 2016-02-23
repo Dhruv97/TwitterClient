@@ -59,7 +59,8 @@ Describe any challenges encountered while building the app.
     
     
     
-    # Project 5 - Twitter Client
+    
+# Project 5 - *Twitter Client*
 
 Time spent: 5 hours spent in total
 
